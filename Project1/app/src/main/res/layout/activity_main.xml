@@ -39,15 +39,15 @@
 
         <ImageButton
             android:id="@+id/imageButton1"
-            android:background="transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="#00FFFFFF"
             app:srcCompat="@drawable/camera" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:background="transparent"
+            android:background="#00FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -91,7 +91,7 @@
 
         <ImageButton
             android:id="@+id/imageButton3"
-            android:background="transparent"
+            android:background="#00FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -99,7 +99,7 @@
 
         <ImageButton
             android:id="@+id/imageButton4"
-            android:background="transparent"
+            android:background="#00FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -109,7 +109,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="84dp"
         android:orientation="horizontal">
 
         <TextView
@@ -134,7 +134,53 @@
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
+
+
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:text="Choose the temperature"
+            android:layout_marginBottom="30dp"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:backgroundTint="#C61F1F"
+            android:max="30"
+            android:progress="50"
+            android:textColor="#FFFFFF" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
 
 
 </LinearLayout>
