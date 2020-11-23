@@ -15,22 +15,22 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="40sp"
-        android:textColor="#FFFFFF"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:text="Good Morning"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25sp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
+        android:text="View Cameras Around House"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:text="View Cameras"
-        android:textAlignment="center" />
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,7 +38,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton1"
+            android:id="@+id/imageLRoom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -46,7 +46,7 @@
             app:srcCompat="@drawable/camera" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/imageKitchen"
             android:background="#00FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,7 +90,7 @@
         android:orientation="horizontal">
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/imageOutside"
             android:background="#00FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -98,7 +98,7 @@
             app:srcCompat="@drawable/camera" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/imageRRRoom"
             android:background="#00FFFFFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="84dp"
+        android:layout_height="65dp"
         android:orientation="horizontal">
 
         <TextView
@@ -151,16 +151,26 @@
             android:layout_weight="1"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
-            android:text="Choose the temperature"
-            android:layout_marginBottom="30dp"
+            android:text="Choose Inside temperature"
+            android:layout_marginBottom="10dp"
             android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView15"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:textAlignment="center"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:textAlignment="center"
+            android:text="Gif below simulates how it will feel"
             android:textAllCaps="false"
             android:textColor="#FFFFFF" />
 
@@ -180,7 +190,12 @@
 
 
 
-
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageView4"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </LinearLayout>
