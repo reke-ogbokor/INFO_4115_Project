@@ -1,6 +1,7 @@
 package com.info3245.project2;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.info3245.project2.rooms.BathroomActivity;
+import com.info3245.project2.rooms.BedroomActivity;
+import com.info3245.project2.rooms.KitchenActivity;
+import com.info3245.project2.rooms.LibraryActivity;
+import com.info3245.project2.rooms.LivingRoomActivity;
+import com.info3245.project2.rooms.WashingRoomActivity;
 
 import java.util.List;
 
@@ -33,10 +42,44 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
 
         holder.tv_room_title.setText(mData.get(position).getRoomName());
         holder.img_room_thumbnail.setImageResource(mData.get(position).getThumbnail());
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent;
+
+                switch (mData.get(position).getRoomName()) {
+                    case "Living Room":
+                        intent = new Intent(mContext, LivingRoomActivity.class);
+                        break;
+                    case "Kitchen":
+                        intent = new Intent(mContext, KitchenActivity.class);
+                        break;
+                    case "Washing Room":
+                        intent = new Intent(mContext, WashingRoomActivity.class);
+                        break;
+                    case "Library":
+                        intent = new Intent(mContext, LibraryActivity.class);
+                        break;
+                    case "Bedroom":
+                        intent = new Intent(mContext, BedroomActivity.class);
+                        break;
+                    case "Bathroom":
+                        intent = new Intent(mContext, BathroomActivity.class);
+                        break;
+
+                    default:
+                        throw new IllegalStateException("Unexpected value: " + mData.get(position).getRoomName());
+                }
+
+                mContext.startActivity(intent);
+
+            }
+        });
     }
 
     @Override
@@ -48,11 +91,13 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         TextView tv_room_title;
         ImageView img_room_thumbnail;
+        CardView cardView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             tv_room_title = (TextView) itemView.findViewById(R.id.room_title_id);
             img_room_thumbnail = (ImageView) itemView.findViewById(R.id.room_img_id);
+            cardView = (CardView) itemView.findViewById(R.id.cardview_id);
         }
     }
 
