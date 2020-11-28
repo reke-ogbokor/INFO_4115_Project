@@ -55,9 +55,8 @@
                     android:layout_height="54dp"
                     android:textColor="#fff"
                     android:gravity="center"
-                    android:text="@string/home_description"
-
-                    android:textSize="16sp" />
+                    android:text="Date"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 

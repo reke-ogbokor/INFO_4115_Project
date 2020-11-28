@@ -68,6 +68,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/textView0"
                                 android:layout_width="wrap_content"
                                 android:layout_height="match_parent"
                                 android:text="3"
@@ -79,6 +80,7 @@
 
                         <View
                             android:layout_width="match_parent"
+                            android:layout_marginRight="5dp"
                             android:layout_height="5dp"
                             android:layout_marginBottom="10dp"
                             android:background="@color/divider_color" />
@@ -98,6 +100,7 @@
                                 android:textStyle="bold" />
 
                             <TextView
+                                android:id="@+id/textView1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="0"
@@ -110,6 +113,7 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="5dp"
+                            android:layout_marginRight="5dp"
                             android:layout_marginBottom="10dp"
                             android:background="@color/divider_color" />
 
@@ -127,9 +131,10 @@
                                 android:textStyle="bold" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:id="@+id/kilowatthr"
+                                android:layout_width="60dp"
+                                android:layout_marginLeft="5dp"
                                 android:layout_height="wrap_content"
-                                android:text="230Kwh"
                                 android:textColor="@color/main_color"
                                 android:textSize="16dp"
                                 android:textStyle="bold" />
@@ -142,6 +147,7 @@
                 </LinearLayout>
 
                 <Button
+                    android:id="@+id/button"
                     android:layout_width="350dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="10dp"
@@ -228,7 +234,7 @@
 
 
                     <Switch
-                        android:id="@+id/switch2"
+                        android:id="@+id/switch0"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -272,7 +278,7 @@
 
 
                     <Switch
-                        android:id="@+id/switch_ac"
+                        android:id="@+id/switch1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -317,7 +323,7 @@
 
 
                     <Switch
-                        android:id="@+id/switch_lights"
+                        android:id="@+id/switch2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
